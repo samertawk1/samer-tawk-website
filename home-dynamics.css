@@ -1,0 +1,19 @@
+/* Gentle native-scroll motion shared by the homepage sections. */
+.home-coaching,.home-movement,.speaking-intro,.mindset-section{scroll-margin-top:94px}
+.home-movement:before,.speaking-intro:before{content:'';position:absolute;inset:0 0 auto;height:70px;pointer-events:none;z-index:0;background:linear-gradient(#bed6e160,transparent)}
+.home-movement:after{content:'';position:absolute;inset:auto 0 0;height:65px;pointer-events:none;background:linear-gradient(transparent,#bed6e1a8)}
+.movement-copy,.speaking-layout{position:relative;z-index:1}
+.home-dynamics .coaching-photo img,.home-dynamics .speaking-portrait img{translate:0 var(--photo-drift,0px)}
+.home-dynamics .movement-background{transform:translateY(var(--terrain-drift,0px)) scale(1.06)}
+.home-dynamics .speaking-surface:before{transform:translateY(var(--terrain-drift,0px)) scale(1.04)}
+.home-dynamics .speaking-terrain{background-position:left calc(50% + var(--terrain-drift,0px))}
+.home-dynamics .mindset-section:after{transform:translate3d(var(--cloud-drift,0px),var(--terrain-drift,0px),0)}
+.home-dynamics .opening .composite{translate:0 var(--hero-drift,0px)}
+.home-dynamics .draw-on-scroll{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.15s cubic-bezier(.22,.61,.36,1)}
+.home-dynamics .draw-on-scroll.drawn{stroke-dashoffset:0}
+.coaching-cta,.speaking-link,.dark-button,.book,.footer-socials a{transition:background .25s,color .25s,box-shadow .3s,translate .3s}
+.coaching-cta span{display:inline-block;transition:transform .3s}
+@media(hover:hover){.coaching-cta:hover,.speaking-link:hover,.dark-button:hover,.book:hover{translate:0 -3px;box-shadow:0 8px 22px #05203b25}.coaching-cta:hover span{transform:translate(3px,-3px)}.footer-socials a:hover{translate:0 -4px;color:#73cfff}}
+@media(prefers-reduced-motion:no-preference){.continue-link span{display:inline-block;animation:continue-cue 2.4s ease-in-out infinite}@keyframes continue-cue{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}}
+@media(max-width:700px){.home-movement:before,.speaking-intro:before,.home-movement:after{height:35px}}
+@media(prefers-reduced-motion:reduce){.home-dynamics .coaching-photo img,.home-dynamics .speaking-portrait img,.home-dynamics .opening .composite{translate:none}.home-dynamics .movement-background,.home-dynamics .speaking-surface:before,.home-dynamics .mindset-section:after{transform:none}.home-dynamics .draw-on-scroll{stroke-dashoffset:0;transition:none}.coaching-cta,.speaking-link,.dark-button,.book,.footer-socials a,.coaching-cta span{transition:none}}

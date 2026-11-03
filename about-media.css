@@ -1,0 +1,57 @@
+.media-story{position:relative;isolation:isolate;overflow:hidden;background:#e3eaf0;color:#101725;min-height:1000px;padding:100px 6% 0}
+.media-story:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(100deg,#edf1f4ed,#dfe9f0b0),url('assets/17.webp') center/cover}
+.media-copy{position:relative;z-index:5;max-width:850px;margin:0;font-size:clamp(22px,2.5vw,36px);line-height:1.47;font-weight:650;letter-spacing:-.025em}
+.media-copy em{font-style:italic}.media-copy strong{font-weight:800}
+.media-collage{position:relative;height:640px;max-width:1450px;margin:-90px auto 0;pointer-events:none}
+.media-layer{position:absolute;bottom:0;object-fit:contain;object-position:bottom;transform-origin:bottom;filter:grayscale(1);height:auto}
+.media-echo{position:absolute;right:-15%;top:0;width:75%;opacity:.12;filter:grayscale(1) sepia(.6) hue-rotate(165deg);z-index:-1;mask-image:linear-gradient(#000,transparent 95%)}
+.media-radio{left:-7%;width:37%;z-index:2;filter:grayscale(1) sepia(.5) hue-rotate(160deg);opacity:.8}
+.media-ski{right:-12%;width:83%;bottom:15%;z-index:1;filter:grayscale(1) sepia(.7) hue-rotate(160deg);opacity:.7}
+.media-interview{left:26%;width:65%;z-index:3;filter:grayscale(1)}
+.media-story:after{content:"";position:absolute;bottom:0;left:0;right:0;height:65px;background:linear-gradient(transparent,#192b45);z-index:4;pointer-events:none}
+.animated .media-copy,.animated .media-layer{opacity:0;translate:0 35px;transition:opacity 2s ease,translate 2.3s ease}
+.animated .media-story.in-view .media-copy,.animated .media-story.in-view .media-layer{opacity:1;translate:0 0}
+.animated .media-story.in-view .media-ski{opacity:.7;transition-delay:.4s}
+.animated .media-story.in-view .media-radio{opacity:.8;transition-delay:1s}
+.animated .media-story.in-view .media-interview{transition-delay:1.6s}
+@media(min-width:1200px){.media-story{padding-top:115px}.media-copy{max-width:900px}.media-collage{margin-top:-170px;height:720px}}
+@media(max-width:700px){.media-story{padding:65px 24px 0;min-height:0}.media-copy{font-size:22px;line-height:1.5}.media-echo{width:145%;right:-70%}.media-collage{height:340px;margin:10px -24px 0}.media-interview{width:85%;left:18%}.media-radio{width:48%;left:-9%}.media-ski{width:105%;right:-25%;bottom:25%}}
+@media(prefers-reduced-motion:reduce){.animated .media-copy,.animated .media-layer{opacity:1;translate:none;transition:none}}
+.media-echo{width:100%;right:-40%;top:-4%;opacity:.2;mix-blend-mode:multiply;mask-image:radial-gradient(ellipse,#000 25%,transparent 70%)}
+.media-radio{mask-image:linear-gradient(#000 85%,transparent 100%)}
+@media(max-width:700px){.media-echo{width:190%;right:-90%;top:0}}
+/* Text stays alongside the collage at every viewport width. */
+.media-story{min-height:1000px;padding:100px 5% 220px}
+.media-copy{width:56%;max-width:800px;font-size:clamp(22px,2.35vw,34px)}
+.media-collage{position:absolute;inset:0 0 0 auto;width:48%;height:100%;max-width:none;margin:0}
+.media-interview{left:-5%;width:125%;bottom:0}
+.media-ski{right:-38%;width:160%;bottom:34%}
+.media-radio{left:-55%;width:85%;bottom:0}
+.media-echo{width:95%;right:-45%;top:0}
+.media-layer,.media-echo{transform:translateY(var(--photo-shift,0px));will-change:transform}
+@media(max-width:700px){
+ .media-story{min-height:960px;padding:55px 20px 250px}
+ .media-copy{width:65%;font-size:clamp(17px,4.4vw,23px);line-height:1.45;letter-spacing:-.02em}
+ .media-collage{width:39%;height:100%;margin:0}
+ .media-interview{width:215%;left:-36%;bottom:0}
+ .media-ski{width:270%;right:-105%;bottom:25%}
+ .media-radio{width:200%;left:-205%;bottom:0}
+ .media-echo{width:230%;right:-147%;top:0;opacity:.22}
+}
+@media(prefers-reduced-motion:reduce){.media-layer,.media-echo{transform:none;will-change:auto}}
+@media(max-width:700px){.media-interview{left:-95%;width:215%}.media-ski{right:-50%;width:225%;bottom:29%}.media-radio{width:155%;left:-170%;bottom:-12px}}
+/* Keep the Olympic skier's head within the collage at wide and narrow sizes. */
+.media-ski{right:-12%;width:135%;bottom:31%}
+@media(max-width:700px){.media-ski{right:-15%;width:195%;bottom:29%}}
+/* Refined editorial wrap around the portrait silhouettes. */
+.media-copy{width:58%;font-size:clamp(18px,1.65vw,25px);line-height:1.5;font-weight:600;max-width:760px}
+.media-copy:before{content:"";float:right;width:28%;height:650px;shape-outside:polygon(100% 0,100% 100%,0 100%,0 75%,28% 57%,60% 43%,90% 28%);shape-margin:20px}
+.media-radio{left:-30%;width:72%}
+@media(max-width:700px){.media-copy{width:70%;font-size:16px;line-height:1.5}.media-copy:before{height:720px;width:18%;shape-margin:8px}.media-radio{left:-160%;width:150%}}
+/* Let the paragraph occupy the open contour beside the moving portraits. */
+.media-story{padding-top:75px;min-height:1050px;padding-bottom:160px}
+.media-copy{width:76%;max-width:none;font-size:clamp(25px,2.35vw,36px);line-height:1.48;font-weight:600;letter-spacing:-.025em}
+.media-copy:before{width:50%;height:900px;shape-outside:polygon(100% 0,100% 100%,0 100%,5% 83%,22% 65%,42% 48%,57% 30%,77% 13%,91% 0);shape-margin:28px}
+.media-story:after{background:linear-gradient(transparent,#254f78);height:38px}
+@media(min-width:1500px){.media-story{min-height:1200px}.media-copy:before{height:1080px}}
+@media(max-width:700px){.media-story{padding:55px 20px 220px;min-height:1120px}.media-copy{width:92%;font-size:clamp(18px,4.7vw,25px);line-height:1.48}.media-copy:before{width:46%;height:980px;shape-outside:polygon(100% 0,100% 100%,0 100%,0 78%,22% 58%,51% 35%,78% 14%,95% 0);shape-margin:12px}.media-radio{left:-110%;width:130%}}

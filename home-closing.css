@@ -1,0 +1,32 @@
+.mindset-section{position:relative;isolation:isolate;overflow:hidden;background:#f3f6f6;color:#050707;padding:145px 4% 125px;min-height:620px}
+.mindset-section:before{content:'';position:absolute;inset:0;z-index:-2;background:linear-gradient(110deg,#f8fafadc,#ffffffb8),url('assets/17.webp') center/cover}
+.mindset-section:after{content:'';position:absolute;inset:-40% 15% 20% -18%;z-index:-1;background:radial-gradient(ellipse at 40% 40%,#06a4dc80,transparent 60%),radial-gradient(ellipse at 60% 50%,#65c6e877,transparent 55%);filter:blur(24px);pointer-events:none}
+.mindset-section h2{font-size:clamp(46px,7.4vw,126px);font-weight:750;line-height:1.1;letter-spacing:-.045em;margin:0 0 80px;max-width:1600px}
+.mindset-word{position:relative;display:inline-block;white-space:nowrap}
+.mindset-word svg{position:absolute;left:0;bottom:-25px;width:100%;height:30px;overflow:visible}
+.mindset-word path{fill:none;stroke:#ed1b2d;stroke-width:8;stroke-linecap:round}
+.mindset-section p{max-width:960px;width:72%;font-size:clamp(20px,2.05vw,32px);line-height:1.48;margin:0;font-weight:500;letter-spacing:-.015em}
+.site-footer{background:#000;color:#fff;padding:75px 4% 30px}
+.footer-grid{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(140px,.65fr) minmax(140px,.65fr);gap:7%;max-width:1600px;margin:auto}
+.footer-brand .identity{margin:0 0 40px;font-size:43px;width:135px}
+.footer-bio{max-width:630px;font-size:clamp(20px,1.9vw,29px);line-height:1.4;margin:0 0 38px}
+.footer-column{padding-top:58px}
+.footer-column h2{font-size:clamp(25px,2.3vw,37px);margin:0 0 25px;letter-spacing:-.02em}
+.footer-column ul{list-style:none;padding:0;margin:0;display:grid;gap:20px}
+.footer-column a{color:#fff;text-decoration:none;font-size:clamp(19px,1.8vw,28px);line-height:1.3}
+.footer-column a:hover{text-decoration:underline;text-underline-offset:6px}
+.footer-socials{display:flex;gap:22px;align-items:center}
+.footer-socials a{color:inherit;text-decoration:none;width:37px;height:37px;display:inline-flex;align-items:center;justify-content:center}
+.footer-socials svg{width:100%;height:100%;fill:currentColor}
+.footer-bottom{max-width:1600px;margin:65px auto 0;color:#d5d5d5;font-size:16px}
+@media(max-width:800px){.mindset-section{padding:90px 6% 85px;min-height:0}.mindset-section h2{font-size:clamp(44px,8.8vw,70px);margin-bottom:60px}.mindset-section p{width:100%;font-size:21px}.footer-grid{grid-template-columns:1fr 1fr;gap:25px}.footer-brand{grid-column:1/-1}.footer-column{padding-top:20px}.site-footer{padding:60px 6% 25px}.footer-bio{font-size:22px}.footer-bottom{margin-top:50px}.mindset-word svg{bottom:-19px;height:23px}}
+@media(prefers-reduced-motion:no-preference){.closing-motion .mindset-section h2,.closing-motion .mindset-section p{opacity:0;transform:translateY(22px);transition:opacity 1.8s ease,transform 1.8s ease}.closing-motion .mindset-section.entered h2,.closing-motion .mindset-section.entered p{opacity:1;transform:none}.closing-motion .mindset-section.entered p{transition-delay:.45s}}
+/* A dedicated snow lane keeps the skier clear of the copy on every screen. */
+.mindset-section{padding-bottom:25px}
+.mindset-ski-track{position:relative;width:100%;height:190px;margin-top:20px;overflow:hidden;pointer-events:none}
+.mindset-skier{position:absolute;left:0;bottom:0;display:block;width:280px;max-width:52%;height:auto;transform:translate3d(var(--ski-x,0px),0,0);will-change:transform}
+@media(max-width:800px){.mindset-section{padding-bottom:18px}.mindset-ski-track{height:145px;margin-top:22px}.mindset-skier{width:215px;max-width:58%}}
+@media(prefers-reduced-motion:reduce){.mindset-skier{left:auto;right:0;transform:none;will-change:auto}}
+
+.mindset-actions{display:flex;justify-content:flex-end;padding:8px 0 24px;position:relative;z-index:1}
+@media(max-width:800px){.mindset-actions{padding:8px 0 18px}}

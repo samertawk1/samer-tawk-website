@@ -1,0 +1,18 @@
+.about-closing{position:relative;isolation:isolate;overflow:hidden;min-height:850px;padding:340px 9% 110px 20%;box-sizing:border-box;background:#eef0ef;color:#10171c;text-align:left}
+.closing-photos{position:absolute;inset:0;z-index:-2;background:linear-gradient(#f0f2f1df,#f0f2f1e8),url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Snowy_Alpine_panorama_%28Unsplash%29.jpg/1920px-Snowy_Alpine_panorama_%28Unsplash%29.jpg') center/cover,url('assets/17.webp') center/cover}
+.about-closing:before{content:"";position:absolute;inset:0 0 auto;height:290px;z-index:0;transform:rotate(180deg);background:linear-gradient(#07518499,#192b68bb),url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Snowy_Alpine_panorama_%28Unsplash%29.jpg/1920px-Snowy_Alpine_panorama_%28Unsplash%29.jpg') center 65%/cover;mask-image:linear-gradient(transparent,#000 28%);pointer-events:none}
+.about-closing:after{display:none}
+.closing-content{position:relative;z-index:2;max-width:1050px;width:100%;margin:0}
+.closing-content h2{font-size:clamp(28px,3vw,46px);line-height:1.3;font-weight:700;letter-spacing:-.025em;margin:0;text-wrap:pretty;text-shadow:none}
+.closing-content h2>span{color:inherit}
+.closing-actions{display:flex;flex-wrap:wrap;gap:18px;margin-top:36px}
+.closing-actions a{display:flex;align-items:center;justify-content:space-between;gap:25px;border:2px solid #111b25;border-radius:40px;padding:20px 27px;color:#fff;background:#111b25;font-size:14px;font-weight:750;text-decoration:none;transition:background .25s,transform .25s}
+.closing-actions a:nth-child(2){background:transparent;color:#111b25}
+.closing-actions a:hover{background:#b9ddf1;color:#111b25;transform:translateY(-3px)}
+.closing-actions a:focus-visible{outline:3px solid #0079ce;outline-offset:5px}
+.closing-actions a span{font-size:23px}
+.mission-route{position:absolute;left:5%;top:180px;width:12%;height:620px;z-index:1;overflow:visible;pointer-events:none}
+.mission-route path{fill:none;stroke:#087bd0;stroke-width:12;stroke-linecap:round}
+.mission-route .route-cross{stroke:#ed1728;stroke-width:20;stroke-linecap:butt}
+@media(max-width:700px){.about-closing{padding:210px 23px 75px 18%;min-height:760px}.about-closing:before{height:180px}.closing-content h2{font-size:clamp(25px,5.6vw,34px)}.mission-route{left:2%;top:130px;width:12%;height:500px}.closing-actions{flex-direction:column;gap:12px}.closing-actions a{font-size:12px;padding:17px 18px}}
+@media(prefers-reduced-motion:reduce){.closing-actions a{transition:none}}
